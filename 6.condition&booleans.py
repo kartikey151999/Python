@@ -1,46 +1,33 @@
-Python 3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
-# 6.condition and booleans 
+def function():
+    print("hello")
 
-name = "Kp"
-if name == 'KP':
-    print("name is printed")
-else:
-...     print("pls enter the correct name")
-...     
-...     
-... age = 15
-... 
-... if name == 'Kp' and age >20:
-...     print("valid")
-... elif name=='Kp' and age <18:
-...     print("invalid")
-... else:
-...     print("exit")
-...     
-...     
-... #object identity - is (test if the 2 object point to same memory/id)    
-... 
-... list1 = [1,2,3]
-... list2 = [1,2,3]
-... 
-... print(list1 == list2)   # check if the value of both list are same or not -> True
-... 
-... print(list1 is list2)  # check if both the list point to same id or not ->False
-... 
-... 
-... # to check id/address of the object -> id(object_name)
-... 
-... print(id(list1))
-... print(id(list2))
-... 
-... 
-... list1 = list2
-... print(list1 is list2)  # return true both point to same id
-... 
-... 
-... list1.append(4)
-... print(list1)   #[1,2,3,4]
-... print(list2)   #[1,2,3,4]
-... 
-... 
+
+print(
+    function()
+)  # print(fun_name()) - execute the statement inside it and return the value if no return is there it return None
+
+
+def greet(name="kp"):
+    return f"Hi {name}"
+
+
+print(greet("kartikey"))
+
+
+# def function_name(postional_argument,keyword_argument=value):
+#   pass
+
+
+# always put postional_argument before the keyword_argument
+# keyword_argument -> argu = value
+
+
+# -------------- *args(take all postional_argument as tuple) , **kwargs(take keyword_argument as dictionary)
+
+
+def biodata(*args, **kwargs):
+    print(args)  # ('jane','india')
+    print(kwargs)  # {'age': 24,'job': 'engineer'}
+
+
+biodata("jane", "india", age=24, job="engineer")
